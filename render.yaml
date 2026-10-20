@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: tg-proxy
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python proxy.py
+    envVars:
+      - key: OWNER_CHAT_ID
+        value: "8588801478"
+      - key: PYTHON_VERSION
+        value: "3.11.0"
